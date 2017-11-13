@@ -33,11 +33,11 @@ enum ReservationError: Error {
     case couldNotLoadError                      // Could Not Load Reservations because of Disk Error
 }
 
-// Informaion about one reservation
+// Informaion about a single reservation
 struct Reservation: Codable {
     var partySize: Int                          // # of people in the pary
     var serviceType: MessageServiceType         // message service type
-    var when: Date                              // date of the reservation
+    var date: Date                              // date of the reservation
 }
 
 class ReservationService {
@@ -227,7 +227,7 @@ class ReservationService {
                          partySize: Int = 1) throws -> Reservation {
         let reservationService = ReservationService.shared
         let date = try reservationService.getDate(from:reservationDate)
-        let reservation = Reservation(partySize: partySize, serviceType: serviceType, when: date)
+        let reservation = Reservation(partySize: partySize, serviceType: serviceType, date: date)
         return reservation
     }
     

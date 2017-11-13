@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class FirstViewController: UIViewController {
+class MyReservationsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,7 @@ class FirstViewController: UIViewController {
         
         self.navigationController?.navigationBar.barTintColor = UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
- //       setTitleTextAttributes(NSForegroundColorAttributeName : UIColor.white)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false;
     }
 
@@ -27,6 +26,8 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func addReservationPressed(_ sender: Any) {
+    }
+    
 }
 

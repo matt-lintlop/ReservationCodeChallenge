@@ -10,25 +10,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyReservations Viiew Controller-->
+        <!--My Reservations Viiew Controller-->
         <scene sceneID="lWh-jG-uYx">
             <objects>
-                <viewController title="My Reservation" id="Y6G-97-aO0" userLabel="MyReservations Viiew Controller" customClass="MyReservationsViewController" customModule="Reservation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Reservation" id="Y6G-97-aO0" userLabel="My Reservations Viiew Controller" customClass="MyReservationsViewController" customModule="Reservation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTo-xu-kxr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9i-z6T">
-                                <rect key="frame" x="68" y="248" width="239" height="171"/>
-                                <color key="backgroundColor" red="0.35502481629999999" green="1" blue="0.4429396229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9i-z6T" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1AS-HZ-um1"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.91364532709121704" green="0.91377681493759155" blue="0.9136165976524353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cqS-9i-z6T" firstAttribute="centerX" secondItem="XTo-xu-kxr" secondAttribute="centerX" id="Xem-Wj-KKp"/>
-                            <constraint firstItem="cqS-9i-z6T" firstAttribute="top" secondItem="vGL-je-vvg" secondAttribute="top" constant="184" id="Yfa-Gm-6A8"/>
-                            <constraint firstItem="cqS-9i-z6T" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" constant="68" id="f4l-OC-2fJ"/>
-                            <constraint firstItem="cqS-9i-z6T" firstAttribute="centerY" secondItem="XTo-xu-kxr" secondAttribute="centerY" id="qMR-BA-cqo"/>
+                            <constraint firstItem="vGL-je-vvg" firstAttribute="trailing" secondItem="cqS-9i-z6T" secondAttribute="trailing" id="648-fK-ZSq"/>
+                            <constraint firstItem="cqS-9i-z6T" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" id="CiW-sa-cWv"/>
+                            <constraint firstItem="cqS-9i-z6T" firstAttribute="top" secondItem="vGL-je-vvg" secondAttribute="top" id="aqv-2O-M12"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vGL-je-vvg"/>
                     </view>
@@ -41,6 +43,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reservationView" destination="cqS-9i-z6T" id="gpL-yh-02Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LT-i8-YPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

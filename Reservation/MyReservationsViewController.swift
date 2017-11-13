@@ -11,6 +11,8 @@ import Foundation
 
 class MyReservationsViewController: UIViewController {
 
+    @IBOutlet weak var reservationView: ReservationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

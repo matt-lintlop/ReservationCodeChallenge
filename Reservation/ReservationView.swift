@@ -10,15 +10,10 @@ import UIKit
 
 class ReservationView: UIView {
 
-//    weak var dateLabel: UILabel!
-//    weak var serviveTypeLabel: UILabel!
-//    weak var durationLabel: UILabel!
-//    weak var descriptionLabel: UILabel!
- 
-    weak var dateLabel: UIView!
-    weak var serviveTypeLabel: UIView!
-    weak var durationLabel: UIView!
-    weak var descriptionLabel: UIView!
+    weak var dateLabel: UILabel!
+    weak var serviveTypeLabel: UILabel!
+    weak var durationLabel: UILabel!
+    weak var descriptionLabel: UILabel!
 
     weak var rescheduleButtonBackground: UIView!
     weak var cancelButtonBackground: UIView!
@@ -26,15 +21,11 @@ class ReservationView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-//        dateLabel = self.viewWithTag(1)! as! UILabel
-//        serviveTypeLabel = self.viewWithTag(2)! as! UILabel
-//        durationLabel = self.viewWithTag(3)! as! UILabel
-//        descriptionLabel = self.viewWithTag(4)! as! UILabel
-
-        dateLabel = self.viewWithTag(1)!
-        serviveTypeLabel = self.viewWithTag(2)!
-        durationLabel = self.viewWithTag(3)!
-        descriptionLabel = self.viewWithTag(4)!
+        // retrieve the sub-view items using thir tag.
+        dateLabel = self.viewWithTag(1)! as! UILabel
+        serviveTypeLabel = self.viewWithTag(2)! as! UILabel
+        durationLabel = self.viewWithTag(3)! as! UILabel
+        descriptionLabel = self.viewWithTag(4)! as! UILabel
 
         rescheduleButtonBackground = self.viewWithTag(5)!
         rescheduleButtonBackground.layer.cornerRadius = 10

@@ -46,21 +46,6 @@
             </objects>
             <point key="canvasLocation" x="245.59999999999999" y="57.121439280359823"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="X14-k8-6wF">
-            <objects>
-                <viewController id="qbK-VQ-bbF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gko-eR-Crf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.27864388434528442" blue="0.22996954231561417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="1lO-MY-M4j"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dBA-HH-t3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1294" y="-306"/>
-        </scene>
         <!--SPA SERVICE-->
         <scene sceneID="DlH-Pi-vot">
             <objects>
@@ -180,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUM-Kn-duz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="109"/>
+            <point key="canvasLocation" x="1556" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofd-px-cle">

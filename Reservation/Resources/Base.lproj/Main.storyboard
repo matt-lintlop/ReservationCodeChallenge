@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9i-z6T" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9i-z6T" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1e-j7-LHB">
@@ -149,12 +149,19 @@
                                     <constraint firstItem="UYy-2U-RgW" firstAttribute="top" secondItem="Lpr-6A-BVx" secondAttribute="bottom" constant="3" id="ynp-5y-Yrz"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UOF-ns-Wgq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.91364532709121704" green="0.91377681493759155" blue="0.9136165976524353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vGL-je-vvg" firstAttribute="trailing" secondItem="cqS-9i-z6T" secondAttribute="trailing" id="648-fK-ZSq"/>
+                            <constraint firstItem="UOF-ns-Wgq" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" id="BSn-L6-0Dr"/>
                             <constraint firstItem="cqS-9i-z6T" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" id="CiW-sa-cWv"/>
+                            <constraint firstItem="vGL-je-vvg" firstAttribute="trailing" secondItem="UOF-ns-Wgq" secondAttribute="trailing" id="M9u-Ey-e55"/>
+                            <constraint firstItem="UOF-ns-Wgq" firstAttribute="top" secondItem="vGL-je-vvg" secondAttribute="top" id="V35-FY-xBK"/>
                             <constraint firstItem="cqS-9i-z6T" firstAttribute="top" secondItem="vGL-je-vvg" secondAttribute="top" id="aqv-2O-M12"/>
+                            <constraint firstItem="vGL-je-vvg" firstAttribute="bottom" secondItem="UOF-ns-Wgq" secondAttribute="bottom" id="gPF-dW-q3k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vGL-je-vvg"/>
                     </view>
@@ -169,6 +176,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="reservationView" destination="cqS-9i-z6T" id="gpL-yh-02Y"/>
+                        <outlet property="reservationsStackView" destination="UOF-ns-Wgq" id="Jzo-Uu-Bhz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LT-i8-YPb" userLabel="First Responder" sceneMemberID="firstResponder"/>

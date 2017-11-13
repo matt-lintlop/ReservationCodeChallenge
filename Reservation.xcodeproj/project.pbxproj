@@ -82,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				340DB1231FB7775D00790815 /* AppDelegate.swift */,
-				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
 				341638051FB7B3D2009EC58C /* ServicePageBackground.swift */,
 				340DB1251FB7775D00790815 /* MyReservationsViewController.swift */,
 				342A2B061FB8EB0E00517746 /* LaunchScreenViewController.swift */,
@@ -90,6 +89,7 @@
 				342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */,
 				340CF2971FB915C90002967E /* ReservationView.swift */,
 				34BDE5EF1FB8485B0073B208 /* ReservationService.swift */,
+				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
 				340DB12F1FB7775D00790815 /* Info.plist */,
 				340CF2921FB90D140002967E /* Resources */,
 			);

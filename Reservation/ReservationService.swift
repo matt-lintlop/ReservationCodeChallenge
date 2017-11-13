@@ -63,7 +63,8 @@ class ReservationService {
         return dateFormatter
     }()
     
-    var reservations: [Reservation] = []
+    // list of all of the user's reservations
+    var reservations: [Reservation]? = []
     
     // MARK: File
     
@@ -106,7 +107,7 @@ class ReservationService {
     // Throws a ReservationError.couldNotSaveRevervations error if
     // the reservations could nt be saved.
     func saveReservationsToDisk() throws {
-        guard reservations.count > 0 else {
+        guard (reservations != nil) && reservations!.count > 0 else {
             return
         }
         guard let url = getReservationDataURL() else {
@@ -116,7 +117,7 @@ class ReservationService {
         do {
             let data = try encoder.encode(reservations)
             try data.write(to: url, options: [])
-            print("Saved Reservations To Disk: \(reservations.count)")
+            print("Saved Reservations To Disk: \(reservations!.count)")
         } catch {
             throw ReservationError.couldNotSaveError
         }
@@ -130,7 +131,7 @@ class ReservationService {
         do {
             let data = try Data(contentsOf: url, options: [])
             self.reservations = try decoder.decode([Reservation].self, from: data)
-            print("Loaded Reservations From Disk: \(reservations.count)")
+            print("Loaded Reservations From Disk: \(reservations!.count)")
             print("Reservations: \(reservations)")
         } catch {
             print("Error Loaded Rservations!: \(error.localizedDescription)")
@@ -237,16 +238,16 @@ class ReservationService {
         let reservationService = ReservationService.shared
         if let reservation = try? reservationService.makeReservation(serviceType: .hotStonyMessage,
                                                                      reservationDate: reservationDate) {
-            self.reservations.append(reservation)
-            
+            if reservations == nil {
+                reservations = []
+            }
+            self.reservations!.append(reservation)
             do {
                 try saveReservationsToDisk()
-                print("Saved Reservations!")
             }
             catch {
                 return nil
             }
-
             return reservation
         }
         else {

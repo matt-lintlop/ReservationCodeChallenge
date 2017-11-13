@@ -14,9 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // initialize the reservations service
+        
+        // initialize the reservations service and load the saved reservations from disk
         let reservationService = ReservationService.shared
         reservationService.loadSavedReservations()
+        
         return true
     }
 

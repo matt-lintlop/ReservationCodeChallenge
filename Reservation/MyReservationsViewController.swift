@@ -12,6 +12,7 @@ import Foundation
 class MyReservationsViewController: UIViewController {
 
     @IBOutlet weak var reservationView: ReservationView!
+    @IBOutlet weak var reservationsStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +24,17 @@ class MyReservationsViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false;
+        
+        makeReservationViews()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func makeReservationViews() {
+        let allReservations = ReservationService.shared.reservations
     }
 }
 

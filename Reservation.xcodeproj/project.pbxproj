@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340CF2951FB9145D0002967E /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340CF2931FB9145D0002967E /* ReservationViewController.swift */; };
-		340CF2961FB9145D0002967E /* ReservationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 340CF2941FB9145D0002967E /* ReservationViewController.xib */; };
 		340CF2981FB915C90002967E /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340CF2971FB915C90002967E /* ReservationView.swift */; };
 		340CF29A1FB91C6B0002967E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340CF2991FB91C6B0002967E /* UIView+Extensions.swift */; };
 		340DB1241FB7775D00790815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340DB1231FB7775D00790815 /* AppDelegate.swift */; };
@@ -25,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		340CF2931FB9145D0002967E /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = SOURCE_ROOT; };
-		340CF2941FB9145D0002967E /* ReservationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReservationViewController.xib; sourceTree = "<group>"; };
 		340CF2971FB915C90002967E /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		340CF2991FB91C6B0002967E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		340DB1201FB7775D00790815 /* Reservation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +56,6 @@
 			children = (
 				340DB12A1FB7775D00790815 /* Assets.xcassets */,
 				340DB1271FB7775D00790815 /* Main.storyboard */,
-				340CF2941FB9145D0002967E /* ReservationViewController.xib */,
 				340DB12C1FB7775D00790815 /* LaunchScreen.storyboard */,
 				340DB1351FB77BB500790815 /* Images */,
 			);
@@ -95,7 +90,6 @@
 				342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */,
 				340CF2971FB915C90002967E /* ReservationView.swift */,
 				34BDE5EF1FB8485B0073B208 /* ReservationService.swift */,
-				340CF2931FB9145D0002967E /* ReservationViewController.swift */,
 				340DB12F1FB7775D00790815 /* Info.plist */,
 				340CF2921FB90D140002967E /* Resources */,
 			);
@@ -165,7 +159,6 @@
 				340DB12E1FB7775D00790815 /* LaunchScreen.storyboard in Resources */,
 				340DB12B1FB7775D00790815 /* Assets.xcassets in Resources */,
 				340DB1291FB7775D00790815 /* Main.storyboard in Resources */,
-				340CF2961FB9145D0002967E /* ReservationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +174,6 @@
 				340CF29A1FB91C6B0002967E /* UIView+Extensions.swift in Sources */,
 				345261071FB840540020AA8F /* ScheduleViewController.swift in Sources */,
 				342B06401FB792780043FDF5 /* SpaServiceViewController.swift in Sources */,
-				340CF2951FB9145D0002967E /* ReservationViewController.swift in Sources */,
 				340DB1261FB7775D00790815 /* MyReservationsViewController.swift in Sources */,
 				341638061FB7B3D2009EC58C /* ServicePageBackground.swift in Sources */,
 				340DB1241FB7775D00790815 /* AppDelegate.swift in Sources */,

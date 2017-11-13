@@ -28,11 +28,6 @@ class ReservationView: UIView {
         self.commonInit()
     }
     
-    convenience init(reservation: Reservation) {
-        self.init(frame: CGRect.zero)
-        setReservation(reservation)
-    }
-    
     func commonInit() {
         // retrieve the sub-view items using the view's tag.
         dateLabel = self.viewWithTag(1)! as! UILabel

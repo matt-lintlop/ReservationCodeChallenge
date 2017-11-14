@@ -28,7 +28,7 @@ class SpaServiceViewController: UIViewController, UITableViewDelegate, UITableVi
         servicePageBackgroundView.delegate = self
         pageControl.addTarget(self, action: #selector(changePage(pageControl:)), for: UIControlEvents.touchUpInside)
         
-        reserveButtonView.layer.cornerRadius = 10
+        reserveButtonView.layer.cornerRadius = 5
         reserveButtonView.isHidden = false
         reserveButton.isEnabled = false
         reserveButton.setTitleColor(UIColor.lightGray, for: .normal)

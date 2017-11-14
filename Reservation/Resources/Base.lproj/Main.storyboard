@@ -240,6 +240,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="326" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <connections>

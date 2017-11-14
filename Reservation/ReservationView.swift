@@ -38,10 +38,10 @@ class ReservationView: UIView {
         descriptionLabel = self.viewWithTag(4)! as! UILabel
         
         rescheduleButtonBackground = self.viewWithTag(5)!
-        rescheduleButtonBackground.layer.cornerRadius = 10
+        rescheduleButtonBackground.layer.cornerRadius = 5
         
         cancelButtonBackground = self.viewWithTag(6)!
-        cancelButtonBackground.layer.cornerRadius = 10
+        cancelButtonBackground.layer.cornerRadius = 5
     }
     
     // set the reservation for this view.
@@ -53,10 +53,14 @@ class ReservationView: UIView {
     }
     
     // draw a black frame around the view
-   override func draw(_ rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext();
         context?.setStrokeColor(UIColor.lightGray.cgColor)
-        context?.stroke(self.bounds)
+    
+        var rect = self.bounds
+        rect.size.width -= 2
+        rect.size.height -= 2
+        context?.stroke(rect)
     }
 }

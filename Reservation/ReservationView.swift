@@ -44,6 +44,7 @@ class ReservationView: UIView {
         cancelButtonBackground.layer.cornerRadius = 10
     }
     
+    // set the reservation for this view.
     func setReservation(_ reservation: Reservation) {
         let reservationService = ReservationService.shared
         dateLabel.text = reservationService.getMonthAndDayString(from: reservation.date)
@@ -51,10 +52,9 @@ class ReservationView: UIView {
         serviceTypeLabel.text = reservation.serviceType.name
     }
     
-    override func draw(_ rect: CGRect) {
+    // draw a black frame around the view
+   override func draw(_ rect: CGRect) {
         super.draw(rect)
-
-        // draw a black frame around the view
         let context = UIGraphicsGetCurrentContext();
         context?.setStrokeColor(UIColor.black.cgColor)
         context?.stroke(self.bounds)

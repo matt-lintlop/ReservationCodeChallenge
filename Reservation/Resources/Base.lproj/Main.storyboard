@@ -109,19 +109,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UOF-ns-Wgq">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UOF-ns-Wgq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                                 <color key="backgroundColor" red="0.065207295119999995" green="0.3916825652" blue="0.72126698489999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="50x-2J-vVE"/>
+                                    <constraint firstAttribute="width" constant="375" id="vRZ-fm-27l"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.91364532709121704" green="0.91377681493759155" blue="0.9136165976524353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UOF-ns-Wgq" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" id="PhI-bG-vUD"/>
-                            <constraint firstItem="UOF-ns-Wgq" firstAttribute="trailing" secondItem="vGL-je-vvg" secondAttribute="trailing" id="gtT-gB-fSl"/>
                             <constraint firstItem="UOF-ns-Wgq" firstAttribute="top" secondItem="vGL-je-vvg" secondAttribute="top" id="hyE-Bt-PLj"/>
+                            <constraint firstItem="UOF-ns-Wgq" firstAttribute="leading" secondItem="vGL-je-vvg" secondAttribute="leading" id="i44-HR-qpi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vGL-je-vvg"/>
                     </view>

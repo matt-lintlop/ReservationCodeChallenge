@@ -25,6 +25,7 @@ class MyReservationsViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false;
         
+        reservationView.removeFromSuperview()
         makeReservationViews()
     }
 
@@ -46,7 +47,8 @@ class MyReservationsViewController: UIViewController {
             
             let frame = reservationView.frame
             print("reservationView frame: /(frame)")
-       }
+        }
+        reservationsStackView.layoutIfNeeded()
     }
 }
 

@@ -57,10 +57,6 @@ class ReservationView: UIView {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext();
         context?.setStrokeColor(UIColor.lightGray.cgColor)
-    
-        var rect = self.bounds
-        rect.size.width -= 2
-        rect.size.height -= 2
-        context?.stroke(rect)
+        context?.stroke(self.bounds)
     }
 }

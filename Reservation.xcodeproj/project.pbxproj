@@ -37,6 +37,7 @@
 		342A2B061FB8EB0E00517746 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaServiceViewController.swift; sourceTree = "<group>"; };
 		345261061FB840540020AA8F /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		348595B41FBB90780034178B /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
 		34BDE5EF1FB8485B0073B208 /* ReservationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +93,7 @@
 				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
 				340DB12F1FB7775D00790815 /* Info.plist */,
 				340CF2921FB90D140002967E /* Resources */,
+				348595B41FBB90780034178B /* Screenshots */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";

@@ -50,5 +50,13 @@ class ReservationView: UIView {
         timeLabel.text = reservationService.getTimeString(from: reservation.date)
         serviceTypeLabel.text = reservation.serviceType.name
     }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
 
+        // draw a black frame around the view
+        let context = UIGraphicsGetCurrentContext();
+        context?.setStrokeColor(UIColor.black.cgColor)
+        context?.stroke(self.bounds)
+    }
 }

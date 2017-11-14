@@ -107,10 +107,10 @@
                                             <constraint firstItem="847-d1-CTd" firstAttribute="top" secondItem="l8u-gi-r48" secondAttribute="top" constant="6" id="xmt-za-Ksz"/>
                                         </constraints>
                                     </view>
-                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjZ-CQ-4jC">
+                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjZ-CQ-4jC">
                                         <rect key="frame" x="217" y="202" width="150" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-mk-d7U">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="WAU-mk-d7U">
                                                 <rect key="frame" x="0.0" y="6" width="150" height="30"/>
                                                 <state key="normal" title="CANCEL">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,6 +142,7 @@
                                     <constraint firstItem="Lpr-6A-BVx" firstAttribute="leading" secondItem="cqS-9i-z6T" secondAttribute="leading" constant="8" id="ehy-7Y-AfE"/>
                                     <constraint firstItem="UYy-2U-RgW" firstAttribute="leading" secondItem="cqS-9i-z6T" secondAttribute="leading" constant="8" id="g7V-VH-gmx"/>
                                     <constraint firstAttribute="bottom" secondItem="l8u-gi-r48" secondAttribute="bottom" constant="8" id="h65-Xf-Fwg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="jfZ-qG-bOr"/>
                                     <constraint firstAttribute="bottom" secondItem="vjZ-CQ-4jC" secondAttribute="bottom" constant="8" id="kIA-OJ-72F"/>
                                     <constraint firstItem="PIk-gY-tWT" firstAttribute="leading" secondItem="cqS-9i-z6T" secondAttribute="leading" id="sER-Zo-52O"/>
                                 </constraints>

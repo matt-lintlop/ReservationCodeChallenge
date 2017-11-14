@@ -9,6 +9,7 @@ enum MessageServiceType: Int, Codable {
     case hotStonyMessage
     case reflexology
     case triggerPointTherapy
+    case gelManicure
     
     var name: String {
         switch self {
@@ -22,6 +23,8 @@ enum MessageServiceType: Int, Codable {
             return "Reflexology"
         case .triggerPointTherapy:
             return "Trigger Point Therapy"
+        case .gelManicure:
+            return "Gel Manicure"
         }
     }
 }
@@ -234,9 +237,9 @@ class ReservationService {
     
     // MARK: Testing
     func makeTestReservation() -> Reservation? {
-        let reservationDate: ReservationDateType = (year: 2017, month: 11, day: 13, hours: 9, minutes: 0)
+        let reservationDate: ReservationDateType = (year: 2016, month: 3, day: 26, hours: 10, minutes: 00)
         let reservationService = ReservationService.shared
-        if let reservation = try? reservationService.makeReservation(serviceType: .hotStonyMessage,
+        if let reservation = try? reservationService.makeReservation(serviceType: .gelManicure,
                                                                      reservationDate: reservationDate) {
             if reservations == nil {
                 reservations = []

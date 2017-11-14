@@ -24,8 +24,8 @@ class MyReservationsViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.navigationController?.navigationBar.isTranslucent = false;
-            
- //       makeReservationViews()
+        
+        makeReservationViews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,14 +40,12 @@ class MyReservationsViewController: UIViewController {
         var reservationViews: [ReservationView] = []
         for reservation in allReservations {
             let reservationView = self.reservationView.copyView() as! ReservationView
-            self.view.addSubview(reservationView)
             reservationView.setReservation(reservation)
             reservationViews.append(reservationView)
-            reservationsStackView.translatesAutoresizingMaskIntoConstraints = false
             reservationsStackView.addArrangedSubview(reservationView)
             
             let frame = reservationView.frame
-            print("/(frame)")
+            print("reservationView frame: /(frame)")
        }
     }
 }

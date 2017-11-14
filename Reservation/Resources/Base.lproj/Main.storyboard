@@ -32,7 +32,7 @@
                                 <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMK-qI-glF" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="208" width="375" height="250"/>
+                                <rect key="frame" x="8" y="208" width="375" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1v0-fm-XHb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -147,7 +147,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="rQU-sh-HfD" firstAttribute="top" secondItem="1qJ-Ug-KDd" secondAttribute="bottom" constant="3.5" id="3MF-MN-N8N"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="3aV-gQ-V5n"/>
                                     <constraint firstItem="U8E-LR-gXw" firstAttribute="leading" secondItem="MMK-qI-glF" secondAttribute="leading" constant="8" id="65z-pk-sEa"/>
                                     <constraint firstAttribute="bottom" secondItem="h2w-ia-zeY" secondAttribute="bottom" constant="8" id="6eC-fq-KkE"/>
                                     <constraint firstAttribute="trailing" secondItem="h2w-ia-zeY" secondAttribute="trailing" constant="8" id="6qY-l3-gQm"/>
@@ -178,9 +177,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MMK-qI-glF" firstAttribute="centerY" secondItem="wTz-6Q-8DH" secondAttribute="centerY" id="2Bz-tg-CyI"/>
+                            <constraint firstItem="MMK-qI-glF" firstAttribute="leading" secondItem="BZs-M8-FFL" secondAttribute="leading" constant="8" id="KKB-JF-XYz"/>
                             <constraint firstItem="edg-hN-Fj2" firstAttribute="leading" secondItem="BZs-M8-FFL" secondAttribute="leading" constant="8" id="Vh4-xI-PR0"/>
                             <constraint firstItem="BZs-M8-FFL" firstAttribute="bottom" secondItem="edg-hN-Fj2" secondAttribute="bottom" constant="8" id="cid-IC-yX0"/>
-                            <constraint firstItem="MMK-qI-glF" firstAttribute="centerX" secondItem="edg-hN-Fj2" secondAttribute="centerX" id="hG6-Lr-7ZG"/>
+                            <constraint firstItem="MMK-qI-glF" firstAttribute="trailing" secondItem="BZs-M8-FFL" secondAttribute="trailing" constant="8" id="ldB-SS-yIf"/>
                             <constraint firstItem="edg-hN-Fj2" firstAttribute="top" secondItem="BZs-M8-FFL" secondAttribute="top" constant="8" id="pBO-bh-sZO"/>
                             <constraint firstItem="BZs-M8-FFL" firstAttribute="trailing" secondItem="edg-hN-Fj2" secondAttribute="trailing" constant="8" id="zpZ-f6-Gen"/>
                         </constraints>
@@ -196,6 +196,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="contentView" destination="edg-hN-Fj2" id="bvW-S1-Guj"/>
                         <outlet property="reservationView" destination="MMK-qI-glF" id="4vd-sk-O3y"/>
                     </connections>
                 </viewController>

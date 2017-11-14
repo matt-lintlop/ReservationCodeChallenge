@@ -12,11 +12,28 @@ import Foundation
 class MyReservationsViewController: UIViewController {
 
     @IBOutlet weak var reservationView: ReservationView!
-    @IBOutlet weak var reservationsStackView: UIStackView!
+    
+    var scrollView: UIScrollView!
+    var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[scrollView]|", options: .alignAllCenterX, metrics: nil, views: ["scrollView": scrollView]))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[scrollView]|", options: .alignAllCenterX, metrics: nil, views: ["scrollView": scrollView]))
+    
+        stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        scrollView.addSubview(stackView)
+        
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[stackView]|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: ["stackView": stackView]))
+        scrollView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[stackView]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: ["stackView": stackView]))
+        
+  
         // set the navigaition bar color = light blue and the navigation title color = white
         let lightBlue = UIColor(red: 102.0/255.0, green: 178.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         
@@ -43,11 +60,11 @@ class MyReservationsViewController: UIViewController {
             let reservationView = self.reservationView.copyView() as! ReservationView
             reservationView.setReservation(reservation)
             reservationViews.append(reservationView)
-            reservationsStackView.addArrangedSubview(reservationView)
+            stackView.addArrangedSubview(reservationView)
         }
         
         // set the stackview height constraint
-        let constraints = reservationsStackView.constraints as [NSLayoutConstraint]
+        let constraints = stackView.constraints as [NSLayoutConstraint]
         for constraint in constraints {
             if constraint.identifier == "stackViewHeight" {
                 constraint.constant = CGFloat(reservationView.frame.size.height) * CGFloat(allReservations.count)
@@ -55,7 +72,7 @@ class MyReservationsViewController: UIViewController {
             }
         }
 
-        reservationsStackView.layoutIfNeeded()
+        stackView.layoutIfNeeded()
     }
 }
 

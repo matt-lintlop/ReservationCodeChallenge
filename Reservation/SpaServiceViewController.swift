@@ -10,11 +10,11 @@ import UIKit
 
 class SpaServiceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ServiceBackgroundPageViewDelegate {
     @IBOutlet weak var reserveButtonView: UIView!
-    @IBOutlet weak var servicesTableview: UITableView!
     @IBOutlet weak var servicePageBackgroundView: ServiceBackgroundPageView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var reserveButton: UIButton!
-    
+    @IBOutlet weak var servicesTableview: UITableView!
+
     let messageServiceNames: [String] = [MessageServiceType.swedishMessage.name,
                                          MessageServiceType.deepTissueMessage.name,
                                          MessageServiceType.hotStonyMessage.name,
@@ -32,6 +32,8 @@ class SpaServiceViewController: UIViewController, UITableViewDelegate, UITableVi
         reserveButtonView.isHidden = false
         reserveButton.isEnabled = false
         reserveButton.setTitleColor(UIColor.lightGray, for: .normal)
+        
+        servicesTableview.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

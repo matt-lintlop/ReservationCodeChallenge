@@ -234,7 +234,7 @@ class ReservationService {
     
     // MARK: Testing
     func makeTestReservation() -> Reservation? {
-        let reservationDate: ReservationDateType = (year: 2017, month: 11, day: 12, hours: 9, minutes: 0)
+        let reservationDate: ReservationDateType = (year: 2017, month: 11, day: 13, hours: 9, minutes: 0)
         let reservationService = ReservationService.shared
         if let reservation = try? reservationService.makeReservation(serviceType: .hotStonyMessage,
                                                                      reservationDate: reservationDate) {

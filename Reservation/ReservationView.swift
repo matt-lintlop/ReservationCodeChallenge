@@ -11,6 +11,7 @@ import UIKit
 class ReservationView: UIView {
 
     weak var dateLabel: UILabel!
+    weak var timeLabel: UILabel!
     weak var serviceTypeLabel: UILabel!
     weak var durationLabel: UILabel!
     weak var descriptionLabel: UILabel!
@@ -31,6 +32,7 @@ class ReservationView: UIView {
     func commonInit() {
         // retrieve the sub-view items using the view's tag.
         dateLabel = self.viewWithTag(1)! as! UILabel
+        timeLabel = self.viewWithTag(7)! as! UILabel
         serviceTypeLabel = self.viewWithTag(2)! as! UILabel
         durationLabel = self.viewWithTag(3)! as! UILabel
         descriptionLabel = self.viewWithTag(4)! as! UILabel
@@ -45,6 +47,7 @@ class ReservationView: UIView {
     func setReservation(_ reservation: Reservation) {
         let reservationService = ReservationService.shared
         dateLabel.text = reservationService.getMonthAndDayString(from: reservation.date)
+        timeLabel.text = reservationService.getTimeString(from: reservation.date)
         serviceTypeLabel.text = reservation.serviceType.name
     }
 

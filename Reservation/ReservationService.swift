@@ -77,12 +77,10 @@ class ReservationService {
             try getReservationsFromDisk()
         }
         catch {
-            print("Error loading Reservations from Disk!")
             if let _ = ReservationService.shared.makeTestReservation() {
-                print("Made Test Reservation")
             }
             else {
-                print("Error after makeTestReservation:")
+                print("Error after makeTestReservation")
             }
         }
     }

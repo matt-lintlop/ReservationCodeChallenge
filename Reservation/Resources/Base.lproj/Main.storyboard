@@ -208,44 +208,93 @@
         <scene sceneID="DlH-Pi-vot">
             <objects>
                 <viewController title="SPA SERVICE" id="8tN-L3-2du" customClass="SpaServiceViewController" customModule="Reservation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bBA-HM-j0c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-pQ-4sP">
-                                <rect key="frame" x="30" y="317" width="315" height="320"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="Jwd-zW-StR"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="services" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MessageServicesCell" rowHeight="52" id="Y7e-Oo-c9t">
-                                        <rect key="frame" x="0.0" y="28" width="315" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y7e-Oo-c9t" id="dDA-UT-DVP">
-                                            <rect key="frame" x="0.0" y="0.0" width="282" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="8tN-L3-2du" id="1g1-3U-yyb"/>
-                                    <outlet property="delegate" destination="8tN-L3-2du" id="bhr-TG-vO7"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2gG-kO-aDg" firstAttribute="trailing" secondItem="qCo-pQ-4sP" secondAttribute="trailing" constant="30" id="VUo-ll-hP8"/>
-                            <constraint firstItem="2gG-kO-aDg" firstAttribute="bottom" secondItem="qCo-pQ-4sP" secondAttribute="bottom" constant="30" id="qGF-I3-3mK"/>
-                            <constraint firstItem="qCo-pQ-4sP" firstAttribute="leading" secondItem="2gG-kO-aDg" secondAttribute="leading" constant="30" id="sBh-mJ-YRp"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="2gG-kO-aDg"/>
-                    </view>
                     <connections>
-                        <outlet property="servicesTableview" destination="qCo-pQ-4sP" id="Z7C-FD-xcO"/>
+                        <outlet property="pageControl" destination="bta-OI-pSd" id="Alh-BE-6YS"/>
+                        <outlet property="reserveButton" destination="1Yt-L4-DDd" id="RDt-aF-s0I"/>
+                        <outlet property="reserveButtonView" destination="6yu-33-928" id="heV-3z-6JY"/>
+                        <outlet property="servicePageBackgroundView" destination="aGe-vu-bhY" id="aNa-e6-Iwb"/>
+                        <outlet property="servicesTableview" destination="fCM-zX-XNN" id="KnA-DV-Uf7"/>
                     </connections>
                 </viewController>
+                <view contentMode="scaleToFill" id="7jp-c8-F26">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-vu-bhY" userLabel="Background" customClass="ServiceBackgroundPageView" customModule="Reservation" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <color key="backgroundColor" red="0.88981593550000004" green="0.13359962049999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvE-5Y-IOJ" userLabel="Foreground">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yu-33-928" userLabel="ReserveButton">
+                                    <rect key="frame" x="30" y="251" width="159" height="36"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yt-L4-DDd">
+                                            <rect key="frame" x="56" y="3" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.3308261374" green="0.27955542979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="Iol-gW-5Il"/>
+                                        <constraint firstAttribute="width" constant="159" id="YJ4-fX-dAG"/>
+                                    </constraints>
+                                </view>
+                                <pageControl opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bta-OI-pSd">
+                                    <rect key="frame" x="168" y="368" width="39" height="37"/>
+                                    <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="currentPageIndicatorTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="bta-OI-pSd" firstAttribute="centerX" secondItem="lvE-5Y-IOJ" secondAttribute="centerX" id="WZb-nP-akT"/>
+                                <constraint firstItem="6yu-33-928" firstAttribute="leading" secondItem="lvE-5Y-IOJ" secondAttribute="leading" constant="30" id="Xhv-oh-kme"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCM-zX-XNN">
+                            <rect key="frame" x="30" y="417" width="315" height="220"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="220" id="roD-vj-1pe"/>
+                            </constraints>
+                            <prototypes>
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="services" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MessageServicesCell" id="3qj-uD-kAa">
+                                    <rect key="frame" x="0.0" y="28" width="315" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3qj-uD-kAa" id="IOB-fW-bzV">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </tableViewCellContentView>
+                                </tableViewCell>
+                            </prototypes>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.35502481629999999" green="1" blue="0.4429396229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="n3c-dV-cj2" firstAttribute="trailing" secondItem="lvE-5Y-IOJ" secondAttribute="trailing" id="4Og-KW-Sqk"/>
+                        <constraint firstItem="aGe-vu-bhY" firstAttribute="top" secondItem="7jp-c8-F26" secondAttribute="top" id="6Oo-TS-7X5"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="leading" secondItem="n3c-dV-cj2" secondAttribute="leading" id="A4l-nz-hzX"/>
+                        <constraint firstItem="fCM-zX-XNN" firstAttribute="top" secondItem="6yu-33-928" secondAttribute="bottom" constant="130" id="CEe-4H-Csx"/>
+                        <constraint firstItem="n3c-dV-cj2" firstAttribute="bottom" secondItem="lvE-5Y-IOJ" secondAttribute="bottom" id="CHY-0S-D7W"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="top" secondItem="7jp-c8-F26" secondAttribute="top" id="DLi-gP-vw4"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="top" secondItem="7jp-c8-F26" secondAttribute="top" id="K7w-Ar-p9n"/>
+                        <constraint firstItem="n3c-dV-cj2" firstAttribute="trailing" secondItem="fCM-zX-XNN" secondAttribute="trailing" constant="30" id="TqI-6l-O6s"/>
+                        <constraint firstItem="aGe-vu-bhY" firstAttribute="trailing" secondItem="n3c-dV-cj2" secondAttribute="trailing" id="WJN-SO-Li9"/>
+                        <constraint firstItem="fCM-zX-XNN" firstAttribute="top" secondItem="bta-OI-pSd" secondAttribute="bottom" constant="12" id="aeP-OX-58p"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="leading" secondItem="n3c-dV-cj2" secondAttribute="leading" id="iQ3-fT-dyT"/>
+                        <constraint firstItem="n3c-dV-cj2" firstAttribute="bottom" secondItem="fCM-zX-XNN" secondAttribute="bottom" constant="30" id="kqD-xq-Ed7"/>
+                        <constraint firstItem="aGe-vu-bhY" firstAttribute="bottom" secondItem="n3c-dV-cj2" secondAttribute="bottom" id="p42-77-8Fz"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="trailing" secondItem="n3c-dV-cj2" secondAttribute="trailing" id="qSL-0y-HoQ"/>
+                        <constraint firstItem="aGe-vu-bhY" firstAttribute="leading" secondItem="n3c-dV-cj2" secondAttribute="leading" id="sR6-Gl-ioX"/>
+                        <constraint firstItem="lvE-5Y-IOJ" firstAttribute="bottom" secondItem="n3c-dV-cj2" secondAttribute="bottom" id="wv8-lo-hy0"/>
+                        <constraint firstItem="fCM-zX-XNN" firstAttribute="leading" secondItem="n3c-dV-cj2" secondAttribute="leading" constant="30" id="xuT-k3-p5x"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="n3c-dV-cj2"/>
+                </view>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnH-9i-k2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1148" y="57"/>
@@ -263,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUM-Kn-duz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="-745"/>
+            <point key="canvasLocation" x="586" y="-1182"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofd-px-cle">

@@ -56,7 +56,7 @@ class ReservationView: UIView {
    override func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext();
-        context?.setStrokeColor(UIColor.black.cgColor)
+        context?.setStrokeColor(UIColor.lightGray.cgColor)
         context?.stroke(self.bounds)
     }
 }

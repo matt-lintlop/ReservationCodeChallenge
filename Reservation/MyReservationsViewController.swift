@@ -44,10 +44,17 @@ class MyReservationsViewController: UIViewController {
             reservationView.setReservation(reservation)
             reservationViews.append(reservationView)
             reservationsStackView.addArrangedSubview(reservationView)
-            
-            let frame = reservationView.frame
-            print("reservationView frame: /(frame)")
         }
+        
+        // set the stackview height constraint
+        let constraints = reservationsStackView.constraints as [NSLayoutConstraint]
+        for constraint in constraints {
+            if constraint.identifier == "stackViewHeight" {
+                constraint.constant = CGFloat(reservationView.frame.size.height) * CGFloat(allReservations.count)
+                break
+            }
+        }
+
         reservationsStackView.layoutIfNeeded()
     }
 }

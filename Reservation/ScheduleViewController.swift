@@ -16,6 +16,7 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var partySizeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class ScheduleViewController: UIViewController {
         reserveButton.setNeedsDisplay()
         
         serviceImageView.image = UIImage(named: "Images/SmallHotStoneMassage.png")
+        
+        partySizeButton.layer.borderWidth = 1
+        partySizeButton.layer.borderColor = UIColor.black.cgColor
+        partySizeButton.layer.cornerRadius = 4
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,5 +40,10 @@ class ScheduleViewController: UIViewController {
     @IBAction func reservePressed(_ sender: Any) {
         print("Reserve Button Pressed")
     }
+    
+    @IBAction func partySizePressed(_ sender: Any) {
+        print("Party Size Button Pressed")
+    }
+    
 }
 

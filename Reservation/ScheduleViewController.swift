@@ -11,16 +11,17 @@ import UIKit
 class ScheduleViewController: UIViewController {
 
     @IBOutlet weak var reserveButton: UIButton!
+    @IBOutlet weak var serviceImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        reserveButton.backgroundColor = UIColor.clear
-        
+        // set the reserver button custom background images.
         reserveButton.setBackgroundImage(UIImage(named: "Images/Button.png"), for: .normal)
         reserveButton.setBackgroundImage(UIImage(named: "Images/ButtonHighlighted.png"), for: .highlighted)
         reserveButton.setNeedsDisplay()
         
+        serviceImageView.image = UIImage(named: "Images/SmallHotStoneMassage.png")
     }
 
     override func didReceiveMemoryWarning() {

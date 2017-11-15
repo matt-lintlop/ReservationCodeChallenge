@@ -342,9 +342,20 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyQ-Zn-lKg" customClass="ReservationInformationView" customModule="Reservation" customModuleProvider="target">
                                 <rect key="frame" x="10" y="82" width="355" height="135"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-Rs-pXV">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="U9d-FM-1AI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="ABz-Rs-pXV" firstAttribute="leading" secondItem="FyQ-Zn-lKg" secondAttribute="leading" id="EgB-2I-TuQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ABz-Rs-pXV" secondAttribute="bottom" id="KGK-Q6-JdG"/>
                                     <constraint firstAttribute="height" constant="135" id="ufQ-ON-ps5"/>
+                                    <constraint firstItem="ABz-Rs-pXV" firstAttribute="top" secondItem="FyQ-Zn-lKg" secondAttribute="top" id="xRT-mD-SgT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -361,6 +372,7 @@
                     </view>
                     <connections>
                         <outlet property="reserveButton" destination="fnU-jN-rve" id="Pum-Md-XDZ"/>
+                        <outlet property="serviceImageView" destination="ABz-Rs-pXV" id="z3z-w7-D40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRu-C3-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

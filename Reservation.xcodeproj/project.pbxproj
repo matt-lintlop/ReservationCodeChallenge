@@ -84,10 +84,10 @@
 			children = (
 				340DB1231FB7775D00790815 /* AppDelegate.swift */,
 				341638051FB7B3D2009EC58C /* ServicePageBackground.swift */,
-				340DB1251FB7775D00790815 /* MyReservationsViewController.swift */,
 				342A2B061FB8EB0E00517746 /* LaunchScreenViewController.swift */,
-				345261061FB840540020AA8F /* ScheduleViewController.swift */,
+				340DB1251FB7775D00790815 /* MyReservationsViewController.swift */,
 				342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */,
+				345261061FB840540020AA8F /* ScheduleViewController.swift */,
 				340CF2971FB915C90002967E /* ReservationView.swift */,
 				34BDE5EF1FB8485B0073B208 /* ReservationService.swift */,
 				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
@@ -320,7 +320,7 @@
 				DEVELOPMENT_TEAM = US5DTPYQ6L;
 				INFOPLIST_FILE = Reservation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matt.Reservation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matt.codingchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,7 +335,7 @@
 				DEVELOPMENT_TEAM = US5DTPYQ6L;
 				INFOPLIST_FILE = Reservation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matt.Reservation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matt.codingchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

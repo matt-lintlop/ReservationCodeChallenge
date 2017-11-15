@@ -221,9 +221,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRX-cy-TTq" userLabel="Foreground">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-BV-Tsm">
+                                            <pageControl opaque="NO" contentMode="scaleAspectFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xTo-BV-Tsm">
                                                 <rect key="frame" x="168" y="270" width="39" height="37"/>
-                                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="pageIndicatorTintColor" red="0.62061780691146851" green="0.64258986711502075" blue="0.67349112033843994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="currentPageIndicatorTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </pageControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6kx-ZX-IPH">
@@ -249,7 +249,7 @@
                                                 </connections>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IgQ-ua-l4q" userLabel="ReserveButtonBackground">
-                                                <rect key="frame" x="8" y="250" width="159" height="36"/>
+                                                <rect key="frame" x="8" y="231" width="159" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-9c-38A">
                                                         <rect key="frame" x="45.946900683828062" y="3.4130624040549264" width="66" height="29.999999999999986"/>
@@ -276,7 +276,7 @@
                                             <constraint firstItem="6kx-ZX-IPH" firstAttribute="top" secondItem="xTo-BV-Tsm" secondAttribute="bottom" constant="10" id="XuJ-YD-3rA"/>
                                             <constraint firstAttribute="bottom" secondItem="6kx-ZX-IPH" secondAttribute="bottom" constant="28" id="YiX-ea-PCj"/>
                                             <constraint firstItem="6kx-ZX-IPH" firstAttribute="leading" secondItem="qRX-cy-TTq" secondAttribute="leading" constant="8" id="a41-ot-qIJ"/>
-                                            <constraint firstItem="6kx-ZX-IPH" firstAttribute="top" secondItem="IgQ-ua-l4q" secondAttribute="bottom" constant="31" id="ax0-So-3qJ"/>
+                                            <constraint firstItem="6kx-ZX-IPH" firstAttribute="top" secondItem="IgQ-ua-l4q" secondAttribute="bottom" constant="50" id="ax0-So-3qJ"/>
                                             <constraint firstAttribute="trailing" secondItem="6kx-ZX-IPH" secondAttribute="trailing" constant="8" id="pwb-PW-KdZ"/>
                                             <constraint firstItem="xTo-BV-Tsm" firstAttribute="centerX" secondItem="qRX-cy-TTq" secondAttribute="centerX" id="vVS-k5-fWD"/>
                                         </constraints>
@@ -320,35 +320,42 @@
             </objects>
             <point key="canvasLocation" x="1543.2" y="-59.820089955022496"/>
         </scene>
-        <!--MAKE RESERVATION-->
+        <!--SCHEDULE-->
         <scene sceneID="K8T-Ld-L9q">
             <objects>
-                <viewController title="MAKE RESERVATION" id="rsq-Di-XvV" sceneMemberID="viewController">
+                <viewController title="SCHEDULE" id="rsq-Di-XvV" userLabel="SCHEDULE" customClass="ScheduleViewController" customModule="Reservation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohf-PM-jNq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-tL-rW9">
+                                <rect key="frame" x="0.0" y="610" width="375" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="PCu-Lj-0vu"/>
+                                </constraints>
+                                <state key="normal" title="RESERVE">
+                                    <color key="titleColor" red="0.3308261374" green="0.27955542979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reservePressed:" destination="rsq-Di-XvV" eventType="touchUpInside" id="DwM-PN-9Km"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="trailing" secondItem="FbK-tL-rW9" secondAttribute="trailing" id="30f-Q2-WYS"/>
+                            <constraint firstItem="FbK-tL-rW9" firstAttribute="leading" secondItem="qDy-EJ-BlC" secondAttribute="leading" id="7Mt-uR-XA8"/>
+                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="bottom" secondItem="FbK-tL-rW9" secondAttribute="bottom" id="7mq-ja-A7H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qDy-EJ-BlC"/>
                     </view>
+                    <connections>
+                        <outlet property="reserveButton" destination="FbK-tL-rW9" id="OtB-TC-KQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRu-C3-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="-34"/>
-        </scene>
-        <!--SCHEDULE-->
-        <scene sceneID="mnd-aJ-ZiS">
-            <objects>
-                <viewController title="SCHEDULE" id="hho-wt-OKp" customClass="ScheduleViewController" customModule="Reservation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2Ep-8n-kas">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="jmd-tx-ZAy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oUM-Kn-duz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="495" y="-1472"/>
+            <point key="canvasLocation" x="2618" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofd-px-cle">

@@ -17,10 +17,8 @@ class ScheduleViewController: UIViewController {
  
         reserveButton.backgroundColor = UIColor.clear
         
-        let image = UIImage(named: "Images/Button.png")
-        reserveButton.setBackgroundImage(image, for: .normal)
-        reserveButton.setBackgroundImage(UIImage(named: "Images/Button.png"), for: .disabled)
-        reserveButton.setImage(UIImage(named: "Images/ButtonHighlighted.png"), for: .highlighted)
+        reserveButton.setBackgroundImage(UIImage(named: "Images/Button.png"), for: .normal)
+        reserveButton.setBackgroundImage(UIImage(named: "Images/ButtonHighlighted.png"), for: .highlighted)
         reserveButton.setNeedsDisplay()
         
     }

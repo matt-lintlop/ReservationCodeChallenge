@@ -340,10 +340,20 @@
                                     <action selector="reservePressed:" destination="rsq-Di-XvV" eventType="touchUpInside" id="YYg-eT-Ycr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyQ-Zn-lKg" customClass="ReservationInformationView" customModule="Reservation" customModuleProvider="target">
+                                <rect key="frame" x="10" y="82" width="355" height="135"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="ufQ-ON-ps5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qDy-EJ-BlC" firstAttribute="bottom" secondItem="fnU-jN-rve" secondAttribute="bottom" id="54N-3f-oPJ"/>
+                            <constraint firstItem="FyQ-Zn-lKg" firstAttribute="top" secondItem="qDy-EJ-BlC" secondAttribute="top" constant="18" id="LCG-Gn-fuP"/>
+                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="trailing" secondItem="FyQ-Zn-lKg" secondAttribute="trailing" constant="10" id="csz-hE-KhE"/>
+                            <constraint firstItem="FyQ-Zn-lKg" firstAttribute="leading" secondItem="qDy-EJ-BlC" secondAttribute="leading" constant="10" id="eys-PQ-RPv"/>
                             <constraint firstItem="fnU-jN-rve" firstAttribute="leading" secondItem="qDy-EJ-BlC" secondAttribute="leading" id="ruF-MI-KfY"/>
                             <constraint firstItem="fnU-jN-rve" firstAttribute="trailing" secondItem="qDy-EJ-BlC" secondAttribute="trailing" id="yzm-c3-wE6"/>
                         </constraints>
@@ -355,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRu-C3-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2618" y="-35"/>
+            <point key="canvasLocation" x="2616.8000000000002" y="-35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofd-px-cle">

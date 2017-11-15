@@ -52,7 +52,7 @@ class ReservationView: UIView {
         serviceTypeLabel.text = reservation.serviceType.name
     }
     
-    // draw a black frame around the view
+    // draw a light gray frame around the view
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext();

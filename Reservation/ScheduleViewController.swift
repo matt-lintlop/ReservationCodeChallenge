@@ -17,6 +17,7 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var partySizeButton: UIButton!
+    @IBOutlet weak var monthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +46,8 @@ class ScheduleViewController: UIViewController {
         print("Party Size Button Pressed")
     }
     
+    @IBAction func viewCalanderPressed(_ sender: Any) {
+        print("View Valander Button Pressed")
+  }
 }
 

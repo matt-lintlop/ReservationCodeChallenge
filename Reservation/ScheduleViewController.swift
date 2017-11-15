@@ -15,6 +15,7 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var serviceNameLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -349,17 +349,32 @@
                                             <constraint firstAttribute="width" constant="125" id="XgB-ZU-qPF"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbG-By-4XG">
+                                        <rect key="frame" x="143" y="8" width="204" height="27.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Hot Stone Massage">
+                                                <attributes>
+                                                    <font key="NSFont" size="23" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="HbG-By-4XG" firstAttribute="leading" secondItem="ABz-Rs-pXV" secondAttribute="trailing" constant="18" id="5A2-4c-4zL"/>
                                     <constraint firstItem="ABz-Rs-pXV" firstAttribute="top" secondItem="FyQ-Zn-lKg" secondAttribute="top" id="Ven-Zj-LbA"/>
                                     <constraint firstItem="ABz-Rs-pXV" firstAttribute="leading" secondItem="FyQ-Zn-lKg" secondAttribute="leading" id="aqL-WK-347"/>
                                     <constraint firstAttribute="bottom" secondItem="ABz-Rs-pXV" secondAttribute="bottom" id="mZu-s3-60x"/>
+                                    <constraint firstAttribute="trailing" secondItem="HbG-By-4XG" secondAttribute="trailing" constant="8" id="pjW-Ve-Cxs"/>
                                     <constraint firstAttribute="height" constant="135" id="ufQ-ON-ps5"/>
+                                    <constraint firstItem="HbG-By-4XG" firstAttribute="top" secondItem="FyQ-Zn-lKg" secondAttribute="top" constant="8" id="xyi-92-vBJ"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qDy-EJ-BlC" firstAttribute="bottom" secondItem="fnU-jN-rve" secondAttribute="bottom" id="54N-3f-oPJ"/>
                             <constraint firstItem="FyQ-Zn-lKg" firstAttribute="top" secondItem="qDy-EJ-BlC" secondAttribute="top" constant="10" id="LCG-Gn-fuP"/>
@@ -373,6 +388,7 @@
                     <connections>
                         <outlet property="reserveButton" destination="fnU-jN-rve" id="Pum-Md-XDZ"/>
                         <outlet property="serviceImageView" destination="ABz-Rs-pXV" id="z3z-w7-D40"/>
+                        <outlet property="serviceNameLabel" destination="HbG-By-4XG" id="w8C-uA-0P4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRu-C3-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

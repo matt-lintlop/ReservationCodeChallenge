@@ -12,6 +12,7 @@ class ScheduleViewController: UIViewController {
 
     @IBOutlet weak var reserveButton: UIButton!
     @IBOutlet weak var serviceImageView: UIImageView!
+    @IBOutlet weak var serviceNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

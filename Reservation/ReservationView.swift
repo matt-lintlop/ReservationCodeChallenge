@@ -54,9 +54,9 @@ class ReservationView: UIView {
     
     // draw a light gray frame around the view
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        let context = UIGraphicsGetCurrentContext();
-        context?.setStrokeColor(UIColor.lightGray.cgColor)
-        context?.stroke(self.bounds)
+//        super.draw(rect)
+//        let context = UIGraphicsGetCurrentContext();
+//        context?.setStrokeColor(UIColor.lightGray.cgColor)
+//        context?.stroke(self.bounds)
     }
 }

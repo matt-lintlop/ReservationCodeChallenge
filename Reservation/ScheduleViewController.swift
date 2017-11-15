@@ -15,9 +15,14 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        reserveButton.setBackgroundImage(UIImage(named: "/Images/Button.png"), for: .normal)
-        reserveButton.setBackgroundImage(UIImage(named: "/Images/ButtonHighlighted.png"), for: .highlighted)
-        reserveButton.setNeedsDisplay()        
+        reserveButton.backgroundColor = UIColor.clear
+        
+        let image = UIImage(named: "Images/Button.png")
+        reserveButton.setBackgroundImage(image, for: .normal)
+        reserveButton.setBackgroundImage(UIImage(named: "Images/Button.png"), for: .disabled)
+        reserveButton.setImage(UIImage(named: "Images/ButtonHighlighted.png"), for: .highlighted)
+        reserveButton.setNeedsDisplay()
+        
     }
 
     override func didReceiveMemoryWarning() {

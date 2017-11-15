@@ -12,6 +12,7 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Medium</string>
         </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
@@ -328,29 +329,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbK-tL-rW9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-jN-rve">
                                 <rect key="frame" x="0.0" y="610" width="375" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="PCu-Lj-0vu"/>
+                                    <constraint firstAttribute="height" constant="57" id="Apf-UW-2Uf"/>
                                 </constraints>
-                                <state key="normal" title="RESERVE">
-                                    <color key="titleColor" red="0.3308261374" green="0.27955542979999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="RESERVE"/>
                                 <connections>
-                                    <action selector="reservePressed:" destination="rsq-Di-XvV" eventType="touchUpInside" id="DwM-PN-9Km"/>
+                                    <action selector="reservePressed:" destination="rsq-Di-XvV" eventType="touchUpInside" id="YYg-eT-Ycr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="trailing" secondItem="FbK-tL-rW9" secondAttribute="trailing" id="30f-Q2-WYS"/>
-                            <constraint firstItem="FbK-tL-rW9" firstAttribute="leading" secondItem="qDy-EJ-BlC" secondAttribute="leading" id="7Mt-uR-XA8"/>
-                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="bottom" secondItem="FbK-tL-rW9" secondAttribute="bottom" id="7mq-ja-A7H"/>
+                            <constraint firstItem="qDy-EJ-BlC" firstAttribute="bottom" secondItem="fnU-jN-rve" secondAttribute="bottom" id="54N-3f-oPJ"/>
+                            <constraint firstItem="fnU-jN-rve" firstAttribute="leading" secondItem="qDy-EJ-BlC" secondAttribute="leading" id="ruF-MI-KfY"/>
+                            <constraint firstItem="fnU-jN-rve" firstAttribute="trailing" secondItem="qDy-EJ-BlC" secondAttribute="trailing" id="yzm-c3-wE6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qDy-EJ-BlC"/>
                     </view>
                     <connections>
-                        <outlet property="reserveButton" destination="FbK-tL-rW9" id="OtB-TC-KQr"/>
+                        <outlet property="reserveButton" destination="fnU-jN-rve" id="Pum-Md-XDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRu-C3-7RZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

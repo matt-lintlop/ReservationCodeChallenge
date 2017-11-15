@@ -479,6 +479,11 @@
                                     <action selector="viewCalanderPressed:" destination="rsq-Di-XvV" eventType="touchUpInside" id="1pF-zc-7CB"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.png" translatesAutoresizingMaskIntoConstraints="NO" id="bXX-zp-F5L">
+                                <rect key="frame" x="149" y="472" width="77" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.23669813149971322" green="0.94962354274611394" blue="0.31995978116448692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -531,4 +536,7 @@
             <point key="canvasLocation" x="-1087" y="57"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark.png" width="50" height="50"/>
+    </resources>
 </document>

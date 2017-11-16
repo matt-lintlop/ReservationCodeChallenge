@@ -81,21 +81,18 @@ class ReservationService {
     // Initializer
     func loadSavedReservations() {
         do {
+            deleteReservationsFile()        // TESTING
+            
             try getReservationsFromDisk()
         }
         catch {
-            if let _ = ReservationService.shared.makeTestReservation() {
-                print("Made Test Reservation 1")
-            }
-            else {
-                print("Error after makeTestReservation")
-            }
-            
-            if let _ = ReservationService.shared.makeTestReservation() {
-                print("Made Test Reservation 2")
-            }
-            else {
-                print("Error after makeTestReservation")
+            for _ in 0...4 {
+                if let _ = ReservationService.shared.makeTestReservation() {
+                    print("Made Test Reservation 1")
+                }
+                else {
+                    print("Error after makeTestReservation")
+                }
             }
         }
     }
@@ -137,6 +134,14 @@ class ReservationService {
         } catch {
             throw ReservationError.couldNotSaveError
         }
+    }
+    
+    func deleteReservationsFile() {
+        guard let url = getReservationDataURL() else {
+            return
+        }
+        try? FileManager().removeItem(at: url)
+        print("Delete The Reservatios File")
     }
     
     func getReservationsFromDisk() throws  {

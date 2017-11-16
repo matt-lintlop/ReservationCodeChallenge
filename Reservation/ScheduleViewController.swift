@@ -47,7 +47,7 @@ class ScheduleViewController: UIViewController {
     }
     
     @IBAction func viewCalanderPressed(_ sender: Any) {
-        print("View Valander Button Pressed")
+        print("View Calander Button Pressed")
   }
 }
 

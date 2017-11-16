@@ -1,3 +1,10 @@
+//
+//  ReservationReserveService.swift
+//  Reservation
+//
+//  Created by Matthew Lintlop on 11/15/17.
+//  Copyright © 2017 Matthew Lintlop. All rights reserved.
+//
 import Foundation
 
 typealias ReservationDateType = (year: Int, month: Int, day: Int, hours: Int, minutes: Int)

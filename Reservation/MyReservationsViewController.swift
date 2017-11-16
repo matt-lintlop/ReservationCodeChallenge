@@ -15,11 +15,11 @@ class MyReservationsViewController: UIViewController {
     @IBOutlet weak var reservationView: ReservationView!
     @IBOutlet weak var stackView: UIStackView!
     
-    @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewContentHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // set the navigaition bar color = light blue and the navigation title color = white
         let lightBlue = UIColor(red: 102.0/255.0, green: 178.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         
@@ -49,8 +49,8 @@ class MyReservationsViewController: UIViewController {
             stackView.addArrangedSubview(reservationView)
         }
 
-        scrollViewHeightConstraint.constant = (reservationView.frame.size.height * CGFloat(allReservations.count)) - CGFloat(allReservations.count-1)
-        
+//        scrollViewHeightConstraint.constant = (reservationView.frame.size.height * CGFloat(allReservations.count)) - CGFloat(allReservations.count-1)
+//
         stackView.layoutIfNeeded()
     }
 }

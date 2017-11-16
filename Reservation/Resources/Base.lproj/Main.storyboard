@@ -28,14 +28,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edg-hN-Fj2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edg-hN-Fj2">
                                 <rect key="frame" x="8" y="72" width="359" height="587"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMK-qI-glF" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
-                                <rect key="frame" x="8" y="208" width="375" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMK-qI-glF" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
+                                <rect key="frame" x="8" y="208" width="367" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1v0-fm-XHb">
                                         <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
@@ -121,9 +119,22 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6Ta-CB-WVb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MMK-qI-glF" firstAttribute="leading" secondItem="BZs-M8-FFL" secondAttribute="leading" constant="8" id="NZz-iU-cl0"/>
+                            <constraint firstItem="BZs-M8-FFL" firstAttribute="bottom" secondItem="edg-hN-Fj2" secondAttribute="bottom" constant="8" id="YLi-LK-e1o"/>
+                            <constraint firstItem="BZs-M8-FFL" firstAttribute="trailing" secondItem="edg-hN-Fj2" secondAttribute="trailing" constant="8" id="aFG-RE-wXR"/>
+                            <constraint firstItem="BZs-M8-FFL" firstAttribute="trailing" secondItem="MMK-qI-glF" secondAttribute="trailing" id="cyy-ZL-9cF"/>
+                            <constraint firstItem="edg-hN-Fj2" firstAttribute="top" secondItem="BZs-M8-FFL" secondAttribute="top" constant="8" id="o2s-3q-qSi"/>
+                            <constraint firstItem="MMK-qI-glF" firstAttribute="centerY" secondItem="wTz-6Q-8DH" secondAttribute="centerY" id="puM-bF-N1y"/>
+                            <constraint firstItem="MMK-qI-glF" firstAttribute="leading" secondItem="edg-hN-Fj2" secondAttribute="leading" id="q42-qM-TH3"/>
+                            <constraint firstItem="edg-hN-Fj2" firstAttribute="leading" secondItem="BZs-M8-FFL" secondAttribute="leading" constant="8" id="zmm-2r-w1h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BZs-M8-FFL"/>
                     </view>
                     <navigationItem key="navigationItem" title="MY RESERVATIONS" id="BPw-df-MZz">

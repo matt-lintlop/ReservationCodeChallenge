@@ -85,6 +85,14 @@ class ReservationService {
         }
         catch {
             if let _ = ReservationService.shared.makeTestReservation() {
+                print("Made Test Reservation 1")
+            }
+            else {
+                print("Error after makeTestReservation")
+            }
+            
+            if let _ = ReservationService.shared.makeTestReservation() {
+                print("Made Test Reservation 2")
             }
             else {
                 print("Error after makeTestReservation")

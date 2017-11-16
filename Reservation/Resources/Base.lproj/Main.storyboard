@@ -48,9 +48,8 @@
                                     <constraint firstItem="czz-KD-4g6" firstAttribute="leading" secondItem="TUG-PX-sKS" secondAttribute="leadingMargin" id="q7Y-Ku-Nev"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaW-pl-1eO" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaW-pl-1eO" userLabel="Reservation View" customClass="ReservationView" customModule="Reservation" customModuleProvider="target">
                                 <rect key="frame" x="8" y="417" width="359" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4m-ow-916">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
@@ -113,19 +112,26 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.065207295119999995" green="0.3916825652" blue="0.72126698489999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-Of-QRx">
-                                        <rect key="frame" x="217" y="202" width="140" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-Of-QRx">
+                                        <rect key="frame" x="211" y="202" width="140" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-Xw-tY2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="nXg-Xw-tY2">
                                                 <rect key="frame" x="0.0" y="6" width="140" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="s0n-C9-cvv"/>
+                                                </constraints>
                                                 <state key="normal" title="CANCEL">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.3164839149" green="0.36790227889999999" blue="0.39919269080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="nXg-Xw-tY2" firstAttribute="leading" secondItem="HQd-Of-QRx" secondAttribute="leading" id="1TS-bi-qFM"/>
+                                            <constraint firstAttribute="trailing" secondItem="nXg-Xw-tY2" secondAttribute="trailing" id="Ba7-ZN-nSw"/>
+                                            <constraint firstAttribute="bottom" secondItem="nXg-Xw-tY2" secondAttribute="bottom" constant="4" id="FbK-2a-TgR"/>
+                                            <constraint firstItem="nXg-Xw-tY2" firstAttribute="top" secondItem="HQd-Of-QRx" secondAttribute="top" constant="6" id="z72-kD-xY7"/>
+                                        </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30M" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-Xc-vh3">
                                         <rect key="frame" x="310" y="90" width="26" height="16"/>
@@ -136,12 +142,22 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HQd-Of-QRx" secondAttribute="bottom" constant="8" id="2Mr-wS-h1H"/>
+                                    <constraint firstAttribute="trailing" secondItem="HQd-Of-QRx" secondAttribute="trailing" constant="8" id="WkU-Vp-Wgt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="rFT-6c-g8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="HQd-Of-QRx" secondAttribute="trailing" constant="8" id="rnR-gC-kHm"/>
+                                    <constraint firstAttribute="height" constant="250" id="tNG-hR-yzs"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96462160348892212" green="0.96475988626480103" blue="0.96459120512008667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XaW-pl-1eO" firstAttribute="bottom" secondItem="BZs-M8-FFL" secondAttribute="bottom" id="2fQ-Bl-yUW"/>
                             <constraint firstItem="TUG-PX-sKS" firstAttribute="leading" secondItem="wTz-6Q-8DH" secondAttribute="leading" id="48F-1O-b7G"/>
+                            <constraint firstItem="BZs-M8-FFL" firstAttribute="trailing" secondItem="XaW-pl-1eO" secondAttribute="trailing" constant="8" id="4eX-O0-S8G"/>
                             <constraint firstItem="BZs-M8-FFL" firstAttribute="bottom" secondItem="TUG-PX-sKS" secondAttribute="bottom" constant="345" id="FzS-1e-Kgs"/>
+                            <constraint firstItem="XaW-pl-1eO" firstAttribute="leading" secondItem="BZs-M8-FFL" secondAttribute="leading" constant="8" id="daT-yQ-ZZ5"/>
                             <constraint firstItem="TUG-PX-sKS" firstAttribute="top" secondItem="BZs-M8-FFL" secondAttribute="top" id="nOr-hx-C8s"/>
                             <constraint firstAttribute="trailing" secondItem="TUG-PX-sKS" secondAttribute="trailing" id="xmm-rY-XSi"/>
                         </constraints>

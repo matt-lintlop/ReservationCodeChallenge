@@ -17,7 +17,7 @@
 		340DB1361FB77BB500790815 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 340DB1351FB77BB500790815 /* Images */; };
 		341638061FB7B3D2009EC58C /* ServicePageBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341638051FB7B3D2009EC58C /* ServicePageBackground.swift */; };
 		3428BBC01FBD0BA9007E349F /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3428BBBE1FBD0BA7007E349F /* checkmark.png */; };
-		3428BBC11FBD0BA9007E349F /* checkmark@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 3428BBBF1FBD0BA8007E349F /* checkmark@2X.png */; };
+		3428BBC31FBD0E4A007E349F /* checkmark@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 3428BBC21FBD0E4A007E349F /* checkmark@2X.png */; };
 		342A2B071FB8EB0F00517746 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A2B061FB8EB0E00517746 /* LaunchScreenViewController.swift */; };
 		342B06401FB792780043FDF5 /* SpaServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */; };
 		345261071FB840540020AA8F /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345261061FB840540020AA8F /* ScheduleViewController.swift */; };
@@ -38,7 +38,7 @@
 		340DB1351FB77BB500790815 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		341638051FB7B3D2009EC58C /* ServicePageBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePageBackground.swift; sourceTree = "<group>"; };
 		3428BBBE1FBD0BA7007E349F /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
-		3428BBBF1FBD0BA8007E349F /* checkmark@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2X.png"; sourceTree = "<group>"; };
+		3428BBC21FBD0E4A007E349F /* checkmark@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2X.png"; sourceTree = "<group>"; };
 		342A2B061FB8EB0E00517746 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		342B063F1FB792780043FDF5 /* SpaServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaServiceViewController.swift; sourceTree = "<group>"; };
 		345261061FB840540020AA8F /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
 				340DB12F1FB7775D00790815 /* Info.plist */,
 				3428BBBE1FBD0BA7007E349F /* checkmark.png */,
-				3428BBBF1FBD0BA8007E349F /* checkmark@2X.png */,
+				3428BBC21FBD0E4A007E349F /* checkmark@2X.png */,
 				340CF2921FB90D140002967E /* Resources */,
 				348595B41FBB90780034178B /* Screenshots */,
 			);
@@ -170,7 +170,7 @@
 				3428BBC01FBD0BA9007E349F /* checkmark.png in Resources */,
 				340DB12E1FB7775D00790815 /* LaunchScreen.storyboard in Resources */,
 				340DB12B1FB7775D00790815 /* Assets.xcassets in Resources */,
-				3428BBC11FBD0BA9007E349F /* checkmark@2X.png in Resources */,
+				3428BBC31FBD0E4A007E349F /* checkmark@2X.png in Resources */,
 				340DB1291FB7775D00790815 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

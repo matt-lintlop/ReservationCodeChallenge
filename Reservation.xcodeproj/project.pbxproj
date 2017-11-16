@@ -61,6 +61,8 @@
 		340CF2921FB90D140002967E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3428BBBE1FBD0BA7007E349F /* checkmark.png */,
+				3428BBC21FBD0E4A007E349F /* checkmark@2X.png */,
 				340DB12A1FB7775D00790815 /* Assets.xcassets */,
 				340DB1271FB7775D00790815 /* Main.storyboard */,
 				340DB12C1FB7775D00790815 /* LaunchScreen.storyboard */,
@@ -99,8 +101,6 @@
 				34BDE5EF1FB8485B0073B208 /* ReservationService.swift */,
 				340CF2991FB91C6B0002967E /* UIView+Extensions.swift */,
 				340DB12F1FB7775D00790815 /* Info.plist */,
-				3428BBBE1FBD0BA7007E349F /* checkmark.png */,
-				3428BBC21FBD0E4A007E349F /* checkmark@2X.png */,
 				340CF2921FB90D140002967E /* Resources */,
 				348595B41FBB90780034178B /* Screenshots */,
 			);
